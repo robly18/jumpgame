@@ -15,14 +15,14 @@ public:
 
     void        render(SDL_Surface*);
     bool        onScreen();
-    
+
     void        move(float velocity, int deltat);
     bool        checkCollisionWithPlayer(float);
 
     float       x, y;
     int         w, h;
 
-    int         color = 0xFFFF00;
+    int         color;
 };
 
 enum class EType {

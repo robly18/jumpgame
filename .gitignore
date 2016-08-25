@@ -1,4 +1,8 @@
 main
+main.exe
+SDL2.dll
+*.7z
 
 *.swp
 a.out
+
