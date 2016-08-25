@@ -43,13 +43,13 @@ bool QueuedEntity::ready(int t) {
 Entity QueuedEntity::make() {
     switch (type) {
         case EType::TOPSMALL:
-            return Entity(startx, GAME_CEIL, 20, 40, 0xFF0000);
+            return Entity(startx, GAME_CEIL, 20, 40, 0x6666FF);
         case EType::BOTSMALL:
-            return Entity(startx, GAME_FLOOR-40, 20, 40, 0xFF0000);
+            return Entity(startx, GAME_FLOOR-40, 20, 40, 0xFF0088);
         case EType::TOPBUMP:
-            return Entity(startx, GAME_CEIL, 10, 10, 0xFF0000);
+            return Entity(startx, GAME_CEIL, 10, 10, 0xFF0088);
         case EType::BOTBUMP:
-            return Entity(startx, GAME_FLOOR-10, 10, 10, 0xFF0000);
+            return Entity(startx, GAME_FLOOR-10, 10, 10, 0xFF0088);
     }
     return Entity();
 }

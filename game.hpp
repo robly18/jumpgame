@@ -21,7 +21,7 @@ class Game {
 
     const static int floor = GAME_FLOOR;
     const static int ceiling = GAME_CEIL;
-    float   velocity = 0.15;
+    float   velocity = 0.6;
 
     float   obstaclex = 800;
 

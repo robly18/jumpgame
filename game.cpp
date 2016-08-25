@@ -72,10 +72,10 @@ void Game::restart(int time) {
 }
 
 #define PUSH(t, type) queue.push(QueuedEntity(tzero, t, EType::type))
-#define TOP(t) PUSH(t, TOPSMALL)
-#define BOT(t) PUSH(t, BOTSMALL)
-#define UPBUMP(t) PUSH(t, TOPBUMP); PUSH(t+400, BOTBUMP)
-#define BOTBUMP(t) PUSH(t, BOTBUMP); PUSH(t+400, TOPBUMP)
+#define TOP(t) PUSH(t+50, TOPSMALL); PUSH(t+300,BOTSMALL); PUSH(t+550,TOPSMALL)
+#define BOT(t) PUSH(t, BOTSMALL); PUSH(t+300,TOPSMALL); PUSH(t+350, TOPSMALL); PUSH(t+600,BOTSMALL)
+#define UPBUMP(t) PUSH(t, TOPBUMP); PUSH(t+300, BOTBUMP)
+#define BOTBUMP(t) PUSH(t, BOTBUMP); PUSH(t+300, TOPBUMP)
 
 void makeLevel(std::queue<QueuedEntity> &queue, int tzero) {
     for (int i = 0; i != 64; i++) {
