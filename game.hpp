@@ -23,12 +23,12 @@ class Game {
     const static int ceiling = GAME_CEIL;
     float   velocity = 0.6;
 
-    float   obstaclex = 800;
-
     std::queue<QueuedEntity>
             queued;
     std::deque<Entity>
             onScreen;
+    int     timeLeft;
+    int     timeTotal;
 public:
     void    init(int time);
 
@@ -40,4 +40,4 @@ public:
     void    restart(int);
 };
 
-void makeLevel(std::queue<QueuedEntity>&, int);
+void makeLevel(std::queue<QueuedEntity>&, int&, int);
